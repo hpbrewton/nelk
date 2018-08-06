@@ -150,6 +150,9 @@ int
 main (int argc, char *argv[]) {
 	srand(time(0));
 	curc = argv[1];
-	gen(e0());
-	printf("\n");
+	ast *tree = e0();
+	for (;;) {
+		gen(tree);
+		printf("\n");
+	}
 }
